@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -34,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 
-#title-section, main {
+#main {
   grid-area: main;
   h1, p {
     display: inline-block
@@ -83,4 +82,32 @@ section, nav, header, footer, main {
   padding: 10px;
   font-size: 16px;
   background-color: white;
+}
+
+
+/* TODO:
+remove the border coloration on the header for different sizes
+*/
+@media only screen and (max-width: 600px) {
+  #header {grid-area: 1 / span 6;} 
+  #main-navigation {grid-area: 2 / span 6;}
+  #main {grid-area: 3 / span 6;}
+  #ascii-art, #description {grid-area: 4 / span 6;}
+  footer {grid-area: 5 / span 6;}
+}
+
+@media only screen and (min-width: 600px) {
+  #header {grid-area: 1 / span 6;}
+  #main-navigation {grid-area: 2 / span 6;}
+  #main {grid-area: 3 / span 4;}
+  #ascii-art, #description {grid-area: 3 / span 2;}
+  footer {grid-area: 4 / span 6;}
+}
+
+@media only screen and (min-width: 768px) {
+  #header {grid-area: 1 / span 6;}
+  #main-navigation {grid-area: 2 / span 1;}
+  #main {grid-area: 2 / span 4;}
+  #ascii-art, #description {grid-area: 2 / span 1;}
+  footer {grid-area: 3 / span 6;}
 }
