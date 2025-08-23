@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rokkitt", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  background: rosybrown;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hazel {
+  color: brown;
+}
+
+.cactus {
+  color: darkgreen;
+}
+
+#header {
+  grid-area: header;
+  text-align: center;
+  background-color: white;
+}
+
+#title-section {
+  grid-area: main;
+  h1, p {
+    display: inline-block
+  }
+}
+
+#description {
+  grid-area: right;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#main-navigation {
+  grid-area: left;
+  background: white;
+  a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: springgreen;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 7px;
+  }
+
+  a:hover {
+    background-color: lightseagreen;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header'
+    'left main main main main right'
+    'footer footer footer footer footer footer';
+    gap: 10px;
+    padding: 10px;
+}
+
+
+section, nav, header, footer {
+  padding: 10px;
+  font-size: 16px;
+  background-color: white;
+}
