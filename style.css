@@ -34,16 +34,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 
-#title-section {
+#title-section, main {
   grid-area: main;
   h1, p {
     display: inline-block
   }
 }
 
-#description {
+#description, #ascii-art {
   grid-area: right;
 }
+
 
 footer {
   grid-area: footer;
@@ -78,7 +79,7 @@ footer {
 }
 
 
-section, nav, header, footer {
+section, nav, header, footer, main {
   padding: 10px;
   font-size: 16px;
   background-color: white;
